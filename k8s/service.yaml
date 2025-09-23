@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-demo-svc
+  labels:
+    app: fastapi-demo
+spec:
+  type: ClusterIP
+  selector:
+    app: fastapi-demo
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
