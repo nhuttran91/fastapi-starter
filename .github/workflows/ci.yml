@@ -26,7 +26,7 @@ jobs:
         run: pytest -q
 
       - name: Build Docker image
-        run: docker build -t fastapi-starter:ci .
+        run: docker build -t fastapi-starter:${{ github.sha }} .
 
       # OPTIONAL: Push to Amazon ECR (uncomment & configure)
       # - name: Configure AWS credentials (OIDC recommended)
